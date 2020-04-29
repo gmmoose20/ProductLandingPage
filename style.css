@@ -20,15 +20,14 @@ h1 {
 }
 
 header{
-    /* display: flex;
-    justify-content: space-evenly; */
+    
 }
 #nav-bar {
     position: fixed;
     width: 25%;
     background: #DAA520;
-    display: none;
-    height: 100vh;
+    /* display: none; */
+    height: 95vh;
 }
 
 #nav-bar a {
@@ -43,10 +42,17 @@ header{
 }
 
 #nav-bar a:hover {
+    background: rgb(153, 115, 18);
+    color: #fff;
+    margin-right: 15px;
+    transition: 0.8s;
+}
+
+#nav-bar a:focus {
     /* background: rgb(153, 115, 18); */
     color: #fff;
     margin-right: 15px;
-    transition: 0.4s;
+    transition: 0.8s;
 }
 .logo {
     border: 2px solid red;
@@ -63,4 +69,9 @@ header{
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+#collection {
+    border: 2px solid red;
+    
 }
