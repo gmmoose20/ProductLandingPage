@@ -27,7 +27,7 @@ header{
     position: fixed;
     width: 25%;
     background: #DAA520;
-    /* display: none; */
+    display: none;
     height: 100vh;
 }
 
