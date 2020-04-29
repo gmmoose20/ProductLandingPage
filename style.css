@@ -18,60 +18,71 @@ h1 {
     font-weight: 400;
     font-family: 'Sacramento', cursive;
 }
-
-header{
-    
-}
-#nav-bar {
+html {
+    scroll-behavior: smooth;
+  }
+  #header {
+    /* margin-top: 5em; */
+  }
+  .page {
+    display: grid;
+    grid-template-columns: 30vw auto;
+  }
+  
+  .nav-bar {
     position: fixed;
-    width: 25%;
-    background: #DAA520;
-    /* display: none; */
-    height: 95vh;
-}
-
-#nav-bar a {
-    display: block;
-    position: relative;
-    top: 40%;
-    transform: translateY(-40%);
-    text-align: right;
-    font-size: 2rem;
-    color: #fff;
-    margin: 0 15%;
-}
-
-#nav-bar a:hover {
-    background: rgb(153, 115, 18);
-    color: #fff;
-    margin-right: 15px;
-    transition: 0.8s;
-}
-
-#nav-bar a:focus {
-    /* background: rgb(153, 115, 18); */
-    color: #fff;
-    margin-right: 15px;
-    transition: 0.8s;
-}
-.logo {
-    border: 2px solid red;
-    position: relative;
-    width: 60%;
-    float: right;
-    height: 100vh;
-
-}
-
-#header-img {
+    width: 20vw;
+    background: red;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-#collection {
-    border: 2px solid red;
+    padding: 2em;
+    height: 1024px;
+  }
+  
+  .nav-bar a {
+    padding: 2em;
+    text-align: right;
+    text-decoration: none;
+    color: #fff;
     
-}
+  }
+  
+  .nav-bar a:hover {
+    background: #333;
+    margin-left: 10px;
+    transition: 0.4s ease;
+  }
+  
+  main {
+    grid-column-start: 2;
+
+    
+  }
+  #home {
+    border: 2px solid red;
+    padding: 10em;
+    margin-top: -5em;
+    margin-bottom: 5em;
+  }
+  #collections {
+    border: 2px solid red;
+    padding: 10em;
+    margin-bottom: 5em;
+  }
+  
+  #video {
+    border: 2px solid red;
+    padding: 10em;
+    margin-bottom: 5em;
+  }
+  
+  #join {
+    border: 2px solid red;
+    padding: 5em;
+    margin-bottom: 5em;
+  }
+
+  #img-header {
+      width: 200px;
+      height: 200px;
+  }
