@@ -18,47 +18,31 @@ h1 {
     font-weight: 400;
     font-family: 'Sacramento', cursive;
 }
-html {
-    scroll-behavior: smooth;
-  }
-  #header {
-    /* margin-top: 5em; */
-  }
-  .page {
-    display: grid;
-    grid-template-columns: 30vw auto;
-  }
-  
-  #nav-bar {
-    position: fixed;
-    width: 30vw;
-    background: red;
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
-    height: 1024px;
-    opacity: 0.4;
-  }
-  
-  #nav-bar a {
-    padding: 2em;
-    text-align: right;
-    text-decoration: none;
-    color: #fff;
-    
-  }
-  
-  #nav-bar a:hover {
-    background: #333;
-    margin-right: 10px;
-    transition: 0.4s ease;
-  }
-  
-  main {
-    grid-column-start: 2;
 
-    
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 20vw auto;
+  background-color: #2196f3;
+}
+
+nav {
+  border: 2px solid red;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 20vw;
+  position: fixed;
+}
+
+main {
+  border: 2px solid yellow;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  grid-column-start: 2;
+}
+
   #home {
     border: 2px solid red;
     padding: 10em;
@@ -83,7 +67,28 @@ html {
     margin-bottom: 5em;
   }
 
-  #header-img {
-      width: 200px;
-      height: 200px;
-  }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  /*position: relative;*/
+  
+}
+
+.navigation a {
+  position: relative;
+  padding: 2em;
+  margin-top: 1em;
+  text-align: right;
+}
+
+#header-img {
+  max-width: 200px;
+  max-height: 200px;
+}
