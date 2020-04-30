@@ -31,12 +31,13 @@ html {
   
   #nav-bar {
     position: fixed;
-    width: 20vw;
+    width: 30vw;
     background: red;
     display: flex;
     flex-direction: column;
     padding: 2em;
     height: 1024px;
+    opacity: 0.4;
   }
   
   #nav-bar a {
