@@ -8,6 +8,9 @@
     text-decoration: none;
     list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Poppins', sans-serif;
     /* text-align: center; */
@@ -17,21 +20,32 @@ body {
 h1 {
     font-weight: 400;
     font-family: 'Sacramento', cursive;
+    font-size:  200px;
+    letter-spacing: 0.5rem;
+    color:#DAA520;
+}
+h2 {
+  font-weight: 400;
+  font-family: 'Sacramento', cursive;
+  font-size:  100px;
+  letter-spacing: 0.5rem;
+  color:#DAA520;
+  text-align: center;
 }
 
-html {
-  scroll-behavior: smooth;
+p{
+  color: #c4c4c4;
+  font-size: 1.5rem;
+  margin-top: 2em;
 }
-
 header {
   display: grid;
   grid-template-columns: 20vw auto;
-  background-color: #2196f3;
   
 }
 
+
 nav {
-  border: 2px solid red;
   background-color: rgba(255, 255, 255, 0.8);
   width: 20vw;
   position: fixed;
@@ -39,8 +53,25 @@ nav {
   grid-area: header;
 }
 
+.nav-link {
+  color: #DAA520;
+  font-size: 1.25rem;
+  transition: all 0.8s;
+}
+
+.nav-link:hover {
+  background: rgb(151, 117, 29);
+  color: #fff;
+  margin-left: 1em;
+  transition: 0.8s;
+}
+
+.nav-link:focus {
+  background: rgb(151, 117, 29);
+  color: #fff;
+  margin-left: 1em;
+}
 main {
-  border: 2px solid yellow;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   grid-column-start: 2;
@@ -48,30 +79,84 @@ main {
   grid-area: content;
 }
 
+/* Start of Sections */
   #home {
-    border: 2px solid red;
-    padding: 10em;
-    margin-top: -5em;
+    padding: 5em;
     margin-bottom: 5em;
   }
   #collections {
-    border: 2px solid red;
-    padding: 10em;
-    margin-bottom: 5em;
+    
+    
   }
   
   #video-section {
-    border: 2px solid red;
-    padding: 10em;
-    margin-bottom: 5em;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+   
   }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+  }
+
+
   
-  #join {
-    border: 2px solid red;
+  #contact {
     padding: 5em;
     margin-bottom: 5em;
   }
 
+
+  /* End of Sections */
+  /* Contact Form */
+  form {
+    display: flex;
+    justify-content: center;
+  }
+.form-items {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+
+}
+label {
+  text-align: left;
+  padding: 5px 0;
+  color: #DAA520;
+}
+
+input[type="email"]{
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #111; 
+  
+  
+}
+
+
+.form-items #submit {
+  border-radius: 5px;
+  margin: 40px 0 0 0;
+  padding: 10px;
+  width: 300px;
+  color: #DAA520;
+}
+
+#submit:hover {
+  background: #DAA520;
+  color: #fff;
+}
+
+/* end of contact form */
+
+/* Content and Navigation classes */
 
 .content {
   display: flex;
@@ -92,15 +177,47 @@ main {
   margin-top: 1em;
   text-align: right;
 }
+/* End of classes */
 
+
+/* Image/Logo  */
 #header-img {
   max-width: 200px;
   max-height: 200px;
 }
 
-/* On screens that are 992px wide or less, the background color is blue */
-@media(max-width: 900px
-) {
+.logo {
+  text-align:center;
+}
+/* End of image/logo */
+
+
+
+
+/* Mosaic Effect collections */
+
+.mosaic{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 0.25rem;
+    grid-auto-flow: dense;
+}
+
+.mosaic-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+}
+
+.mosaic-items img:hover {
+  transform: scale(1.1);
+}
+
+/* End of mosaic */
+
+/* Media Queries */
+@media(max-width: 900px) {
   header {
     display: flex;
     /* flex-direction: column; */
@@ -108,19 +225,24 @@ main {
  nav {
    display: flex;
    flex-direction: row;
-   background: #333;
+   background: #FFF;
    height: inherit;
    width: 100%;
    z-index: 1;
    justify-content: space-between;
+   
  }
 
  .navigation {
+
    display: flex;
    flex-direction: row;
    justify-content: center;
  }
 
+ .nav-link {
+  color: #DAA520;
+ }
  #header-img {
    width: 100px;
    height: 100px;
@@ -134,39 +256,70 @@ main {
    right: 1em;
  }
 
-  /* #header-img {
-    display: none;
+
+}
+
+
+
+
+
+@media(max-width: 455px) {
+
+  header {
+   
   }
 nav {
   background-color: black;
-  position: fixed;
-  width: 100%;
-  height: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   height: 200px;
+
 
 }
   .navigation {
-   
+    text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    height: inherit;
+   
   }
 
   main {
-    
-    margin-top: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 14em;
+
+
  
   }
 
   .content {
-   display:flex;
-   background-color: blue;
-   
-  } */
+   display: flex;
+   flex-direction: column;
+  }   
+
 }
 
-@media(max-width: 400px
-) {
-  body {
-    display: none;
-  }
+
+/*Mosaic Effect queries*/
+@media screen and (max-width: 650px){
+    .mosaic{
+        display: block;
+    }
+    .mosaic-items{
+        margin-bottom: 1rem;
+    }
+}
+
+/* End of Queries */
+
+
+footer {
+  color: #DAA520;
+  text-align: right;
+  font-size: 1.25rem;
 }
