@@ -1,6 +1,6 @@
 # ProductLandingPage
 
-Project2: Product Landing Page
+Project3: Product Landing Page
 
 From FreeCodeCamp
 
